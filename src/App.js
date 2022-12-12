@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./App.css";
 import Header from "./components/Header";
 
 function App() {
   const [number, setNumber] = useState(0);
 
+  const data = useMemo(() => ({ name: "Sinan" }), []);
+
   return (
     <div className="App">
-      <Header number={number < 5 ? 0 : number} />
+      {/* <Header number={number < 5 ? 0 : number} /> */}
+      <Header data={data} />
       <hr />
 
       <h1>{number}</h1>
