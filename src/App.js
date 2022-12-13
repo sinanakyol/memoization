@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
 import "./App.css";
+import { useState, useMemo } from "react";
 import Header from "./components/Header";
 
 function App() {
@@ -21,4 +21,6 @@ function App() {
 
 export default App;
 
-// "number" her değiştiğinde "State" değiştiği için <div> içerisindeki elemanlar render edilir. Dolayısıyla <Header> da gereksiz yere render edilir. Bunu engellemek için React.memo kullanılır.
+// "number" her değiştiğinde "State" değiştiği için <div> içerisindeki elemanlar render edilir. Dolayısıyla <Header> da gereksiz yere render edilir. Bunu engellemek için "React.memo" kullanılır.
+
+// OBJECT ve ARRAY yapılarında gereksiz render işlemini önlemek için "useMemo" kullanılır.
